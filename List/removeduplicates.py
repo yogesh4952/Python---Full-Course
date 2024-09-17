@@ -4,4 +4,4 @@ for numbers in number:
     if numbers not in uniques:
         uniques.append(numbers)
 
-print(uniques)
+print(uniques) 
