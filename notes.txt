@@ -1,0 +1,6 @@
+table -> collection of rows and columns that helps to storing data in a structured manner
+schema -> basics structure of the data base
+attributes -> properties to be stored in  a db
+primary_key -> a unique key that helps us identify each row of the table
+foregin_key -> a key that helps us to form a one-to-many relationship between two tables
+mamy-to-many -> type of relation that allows multiple rows of a table to be associated with multiple rows of a different table
