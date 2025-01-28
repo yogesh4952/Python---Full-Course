@@ -1,25 +1,22 @@
 from django.db import models
 
 # Create your models here
-class Author(models.Model):
-  first_name = models.CharField(max_length=50)
-  last_name = models.CharField(max_length=50)
-  data_of_birth = models.DateField()
-  phone_number = models.BigIntegerField()
-  email_address = models.EmailField()
-  
-  def __str__(self):
-    return self.first_name + f"  {self.id}"
+from django.db import models
+
+class Post(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    date_posted = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
 
 
-class todo(models.Model):
-  title = models.CharField(max_length=70)
-  content = models.CharField(max_length=200)
-  completion_status  = models.BooleanField()
-  deadline_date = models.DateField()
+class FormData(models.Model):
+    email = models.EmailField()
+    password = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    is_checked = models.BooleanField(default=False)  # For the checkbox
 
-  def __str__(self):
-    return self.title + f"  {self.deadline_date}"
-
-
-
+    def __str__(self):
+        return f"{self.name} - {self.email}"
